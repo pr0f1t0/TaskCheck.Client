@@ -1,0 +1,4 @@
+<div class="flex-col">
+    <label for="input">{{ labelText() }}</label>
+    <input [type]="inputType()" name="input" [(ngModel)]="value" (ngModelChange)="onChange($event)" required>
+</div>

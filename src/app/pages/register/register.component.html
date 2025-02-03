@@ -1,0 +1,27 @@
+<section id="section" class="section">
+    <div class="container">
+        <div class="wrapper">
+            <h1 class="title-register">
+                Create your account
+            </h1>
+            <form (ngSubmit)="onSubmit()">
+                <app-input labelText="Email:"
+                        [(ngModel)]="registerRequest.email"
+                        [name]="'email'"></app-input>
+
+                <app-input labelText="Password:"
+                        inputType="password"
+                        [(ngModel)]="registerRequest.password"
+                        [name]="'password'"></app-input>
+                
+                <app-input labelText="Username:"
+                        inputType="text"
+                        [(ngModel)]="registerRequest.username"
+                        [name]="'username'"></app-input>
+
+                <app-button buttonText="Register"></app-button>
+            </form>
+
+        </div>
+    </div>
+</section>

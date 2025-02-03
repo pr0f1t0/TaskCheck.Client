@@ -1,0 +1,73 @@
+<section class="task-manager">
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <h2>Tasks Overview</h2>
+    </div>
+    
+    <div class="categories">
+      <div class="task-stats">
+        <button class="stat-item" (click)="showAllTasks()">
+          <span class="stat-label">All Tasks</span>
+          <span class="stat-count">{{totalTasks}}</span>
+        </button>
+        <button class="stat-item" (click)="filterTasksByCompleted()">
+          <span class="stat-label">Completed</span>
+          <span class="stat-count">{{completedTasks}}</span>
+        </button>
+        @for(category of categories; track category.id){
+          <div class="stat-item">
+            <button class="category-button" (click)="filterTasksByCategory(category.id)">
+              <span class="stat-label">{{ category.name }}</span>
+            </button>
+            <button class="delete-category-button" (click)="deleteCategory(category.id)">
+              <img src="delete.png" alt="Delete Category">
+            </button>
+          </div>
+          
+        }
+      </div>
+    </div>
+    <button class="btn-add" (click)="openCategoryDialog()">
+      <i class="fas fa-plus"></i> New Category
+    </button>
+  </aside>
+
+  <main class="main-content">
+    <header class="content-header">
+      <h1>Task Check</h1>
+      <p class="welcome-text">Hello, {{ username }}</p>
+      <button class="btn-add" (click)="openTaskDialog()">
+        <i class="fas fa-plus"></i> New Task
+      </button>
+    </header>
+
+    <section class="tasks-container">
+      @for (task of visibleTasks; track task.id) {
+        <div class="task-item">
+          <div class="task-status">
+            <button class="complete-task-button" (click)="markTaskAsCompleted(task.id, task)">
+              {{ task.completed ? 'Mark as Incompleted' : 'Mark as Completed' }}
+            </button>
+          </div>
+          <div class="task-content" [ngClass]="{ 'completed-task': task.completed }">
+            <h3 class="task-title">{{ task.title }}</h3>
+            <p class="task-description">{{ task.description }}</p>
+            <span *ngIf="task.important" class="task-important">Important!</span>
+          </div>
+          <div class="task-actions">
+            <button class="delete-task-button" (click)="deleteTask(task.id)">
+              <img src="delete.png" alt="Delete Task">
+            </button>
+          </div>
+        </div>
+        
+      }
+      
+      @empty {
+        <div class="no-tasks">
+          <p>No tasks available. Create your first task!</p>
+        </div>
+      }
+    </section>
+  </main>
+</section>

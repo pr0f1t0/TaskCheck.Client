@@ -1,0 +1,23 @@
+<section id="section" class="section">
+    <div class="container">
+        <div class="wrapper">
+            <h1 class="title-login">
+                Welcome
+            </h1>
+            <form (ngSubmit)="onSubmit()">
+                <app-input labelText="Email:"
+                        [(ngModel)]="loginRequest.email"
+                        [name]="'email'"></app-input>
+
+                <app-input labelText="Password:"
+                        inputType="password"
+                        [(ngModel)]="loginRequest.password"
+                        [name]="'password'"></app-input>
+
+                <app-button buttonText="Login"></app-button>
+            </form>
+
+            <p class="create-account">Don’t have an account? <a class="link-register" [routerLink]="['/register']">Register</a> instead</p>
+        </div>
+    </div>
+</section>

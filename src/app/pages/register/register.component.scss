@@ -1,0 +1,43 @@
+$primary-color: #3498db;
+$text-color: #333;
+$border-radius: 5px;
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f4f4f4;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  background: #fff;
+  padding: 2rem;
+  border-radius: $border-radius;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title-register {
+  color: $text-color;
+  margin-bottom: 1.5rem;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.create-account {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
