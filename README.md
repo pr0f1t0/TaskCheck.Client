@@ -1,59 +1,30 @@
-# TaskCheckClient
+# TaskCheck.Client - Angular Application
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.5.
+## About the Project
+TaskCheck.Client is the client-side application for TaskCheck, developed using Angular. It provides a user-friendly interface for managing tasks and plans.
 
-## Development server
+## Technologies
+- ![Angular](https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white)
+- ![Docker](https://camo.githubusercontent.com/c9a85f6869aa992f1500dd9d4d4bdff7d405605292ca152587394c1f92552d4f/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f646f636b65722d2532333064623765642e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d646f636b6572266c6f676f436f6c6f723d7768697465)
 
-To start a local development server, run:
+## Installation
+To get started, you can either install or clone this repository on your local machine.
 
+### Cloning the Repository
+To clone the repository using Git, run the following command in your terminal:
 ```bash
-ng serve
+git clone https://github.com/pr0f1t0/TaskCheck.Client.git
 ```
+## Running the application
+### Prerequisites
+To run the API, you need [Docker](https://www.docker.com/get-started/) installed on your machine.
+Before running the application, please ensure that the `8080` port is available and not occupied
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### Running
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
+Go to /repository-path/ and execute the following command:
 ```bash
-ng generate component component-name
+docker compose up -d --build
 ```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+After running the application, you will be able to access it [here](http://localhost:4200):
+`http://localhost:4200`
